@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Poemas</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Pantalla de inicio -->
+    <div id="inicio" class="container">
+        <h1>💌 Palabra Mágica</h1>
+        <p>Escribe una palabra clave para crear un poema:</p>
+        <input type="text" id="palabra" placeholder="Tu palabra">
+        <br><br>
+        <button id="buscarPoema">Buscar Poema</button>
+    </div>
+
+
+    <!-- Pantalla de poema -->
+    <div id="poemaSection" class="container hidden">
+        <h1>💖 Tu Poema</h1>
+        <div id="poema"></div>
+        <button id="nuevoPoema">Ver otro poema</button>
+        <button id="volver">Volver a intentar</button>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+body {
+  background: url('../img/IMG_3078.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+
+.container {
+  background: linear-gradient(
+    rgba(255, 192, 203, 0.2), /* Rosado pastel */
+    rgba(255, 255, 255, 0.2)
+  );
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 700px;
+  text-align: center;
+  margin: 50px auto;
+  color: #c71585; /* Tu rosado */
+  font-size: 22px;
+  line-height: 1.6;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  color: #c71585;
+  font-size: 56px; /* Un poco más grande */
+}
+
+#poema {
+  font-size: 22px;
+  line-height: 1.8; /* Aumenta espacio entre líneas */
+  white-space: pre-line;
+  color: #333;
+  font-style: italic;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+button {
+  background: #c71585;
+  color: white;
+  border: none;
+  margin-top: 40px;
+  padding: 15px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+  background: #a52a72;
+  transform: scale(1.05);
+}
+
+.fade-in {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden {
+  display: none;
+}
+
+input[type="text"] {
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #c71585;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+}
+
+/* Estado inicial: opaco y desplazado */
+.fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#volver {
+  background: #999;
+  margin-left: 10px;
+}
+
+#volver:hover {
+  background: #777;
+}
+
