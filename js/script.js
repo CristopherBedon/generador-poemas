@@ -89,6 +89,9 @@ volverBtn.addEventListener("click", () => {
     inicio.classList.remove("fade-out");
     inicio.classList.add("fade-in");
 
+    // 👇 Limpia el input
+    document.getElementById("palabra").value = "";
+
     setTimeout(() => {
       inicio.classList.add("show");
     }, 50);

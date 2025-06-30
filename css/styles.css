@@ -7,35 +7,35 @@ body {
 }
 
 .container {
-  background: linear-gradient(
-    rgba(255, 192, 203, 0.2), /* Rosado pastel */
-    rgba(255, 255, 255, 0.2)
-  );
+  background: linear-gradient(rgba(255, 192, 203, 0.2),
+      rgba(255, 255, 255, 0.2));
   backdrop-filter: blur(8px);
   border-radius: 15px;
   padding: 40px;
   max-width: 700px;
+  width: 90%;
+  /* 👉 Responsivo */
   text-align: center;
   margin: 50px auto;
-  color: #c71585; /* Tu rosado */
+  color: #c71585;
   font-size: 22px;
   line-height: 1.6;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
   font-family: 'Great Vibes', cursive;
   color: #c71585;
-  font-size: 56px; /* Un poco más grande */
+  font-size: 56px;
 }
 
 #poema {
   font-size: 22px;
-  line-height: 1.8; /* Aumenta espacio entre líneas */
+  line-height: 1.8;
   white-space: pre-line;
   color: #333;
   font-style: italic;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 button {
@@ -55,31 +55,40 @@ button:hover {
   transform: scale(1.05);
 }
 
-.fade-in {
-  animation: fadeIn 1s;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.hidden {
-  display: none;
-}
-
 input[type="text"] {
   padding: 12px;
   margin: 10px 0;
   border: 2px solid #c71585;
   border-radius: 5px;
   font-size: 18px;
-  width: 80%;
-  max-width: 300px;
+  width: 100%;
+  max-width: 400px;
   text-align: center;
+  box-sizing: border-box;
+  /* 👈 clave para que no se desborde */
 }
 
-/* Estado inicial: opaco y desplazado */
+/* Animaciones */
+.fade-in {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
 .fade-out {
   opacity: 0;
   transform: translateY(-20px);
@@ -106,3 +115,34 @@ input[type="text"] {
   background: #777;
 }
 
+/* ✅ RESPONSIVE: Para pantallas pequeñas */
+@media (max-width: 480px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  #poema {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  input[type="text"] {
+    font-size: 16px;
+    width: 100%;
+    max-width: none;
+  }
+
+  button {
+    width: 100%;
+    margin: 10px 0;
+    font-size: 16;
+  }
+}
